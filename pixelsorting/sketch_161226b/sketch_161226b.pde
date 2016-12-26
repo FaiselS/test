@@ -2,8 +2,10 @@ PImage img;
 PImage sorted;
 int index =  0;
 void setup() {
-  size(800 , 400);
-  img = loadImage("../Data/sunflower400.jpg");
+  //size(800 , 400);
+  size(200 , 100);
+  //img = loadImage("../Data/sunflower400.jpg");
+  img = loadImage("../Data/1.png");
   sorted = createImage(img.width, img.height, RGB);
   sorted.loadPixels();
   //img.loadPixels();
@@ -16,7 +18,7 @@ void setup() {
 
 void draw() {
    println(frameRate);
-    for (int n =0; n < 10; n++) {
+    for (int n =0; n < 100000; n++) {
       //Selection sort!
       float record= -1;
       int selectedPixel=index;
@@ -44,6 +46,7 @@ void draw() {
 
   background (0);
   image(img, 0, 0); //img before
-  image(sorted, 400, 0); //img after
+  //image(sorted, 400, 0); //img after
+  image(sorted,100, 0); //img after
 
 }
